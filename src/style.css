@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Courier New", monospace;
+}
+
+.fullsize-text {
+  position: fixed;
+  font-family: Consolas, monospace;
+  font-weight: 900;
+}
+
+@media (orientation: landscape) {
+  .fullsize-text {
+    bottom: -.3em;
+    right: -.1em;
+    font-size: 60vw;
+  }
+}
+
+@media (min-aspect-ratio: 2/1) {
+  .fullsize-text {
+    font-size: 120vh;
+  }
+}
+
+@media (orientation: portrait) {
+  .fullsize-text {
+    bottom: .1em;
+    right: -.5em;
+    font-size: 60vh;
+    transform: rotate(270deg);
+  }
+}
+
+@media (max-aspect-ratio: 1/2) {
+  .fullsize-text {
+    font-size: 120vw;
+  }
+}
+
+.info-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20vh 5vw;
+}
+
+@media (orientation: landscape) {
+  .info-panel {
+    font-size: calc(1.5vh + 3.5vw);
+  }
+}
+
+@media (orientation: portrait) {
+  .info-panel {
+    font-size: 5vw;
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* COLOR */
+
+body {
+  background: #fff;
+}
+
+.blue ::selection { background: #42A5F5; color: #fff; }
+.green ::selection { background: #66BB6A; color: #fff; }
+.orange ::selection { background: #FFA726; color: #fff; }
+.red ::selection { background: #ef5350; color: #fff; }
+.bluegrey ::selection { background: #607D8B; color: #fff; }
+
+.blue .fullsize-text::selection { background: transparent }
+.green .fullsize-text::selection { background: transparent }
+.orange .fullsize-text::selection { background: transparent }
+.red .fullsize-text::selection { background: transparent }
+.bluegrey .fullsize-text::selection { background: transparent }
+
+.blue .fullsize-text { color: #BBDEFB; user-select: none; }
+.green .fullsize-text { color: #C8E6C9; user-select: none; }
+.orange .fullsize-text { color: #FFE0B2; user-select: none; }
+.red .fullsize-text { color: #ffcdd2; user-select: none; }
+.bluegrey .fullsize-text { color: #CFD8DC; user-select: none; }
+
+.blue .subtitle { color: #42A5F5; }
+.green .subtitle { color: #66BB6A; }
+.orange .subtitle { color: #FFA726; }
+.red .subtitle { color: #ef5350; }
+.bluegrey .subtitle { color: #607D8B; }
+
+.blue .title { color: #1976D2; }
+.green .title { color: #388E3C; }
+.orange .title { color: #F57C00; }
+.red .title { color: #d32f2f; }
+.bluegrey .title { color: #455A64; }
